@@ -1,0 +1,139 @@
+  .sortable {
+    margin: 0 auto;
+    padding: 5px;
+    display: inline-block;
+    vertical-align: top;
+    min-width: 90%;
+  }
+  
+  .sortable>div {
+    position: relative;
+    border: 1px solid gray;
+    border-radius: 3px;
+    margin: 3px auto;
+    padding: 11px 10px;
+    overflow: auto;
+    background: #C7D5FF;
+  }
+  
+  textarea {
+    width: 155px;
+    max-width: 155px;
+    white-space: pre-wrap;
+    font: 13px Arial;
+    font-weight: normal;
+    background: white;
+    resize: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+  }
+  
+  .textArr {
+    overflow: auto;
+  }
+  
+  .edit-item {
+    cursor: pointer;
+    float: right;
+    font: 14px Arial;
+    color: gray;
+  }
+  
+  .edit-item img {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .theInput {
+    width: 35px;
+    height: 12px;
+    float: left;
+    padding-left: 2px;
+  }
+
+  .time {
+    font: 13px Arial;
+    color: gray;
+    padding-left: 2px;
+  }
+  
+  .theTask {
+    font: 13px Arial;
+    white-space: pre-wrap;
+    overflow: auto;
+    width: 155px;
+    max-width: 155px;
+    min-height: 40px;
+    height: auto;
+    float: left;
+    color: #5F667A;
+  }
+  
+  .item-item {
+    overflow: auto;
+    min-height: 35px;
+  }
+  
+  select {
+    font: 13px Arial;
+    padding-left: 2px;
+    margin-right: 3px;
+    float: left;
+    cursor: pointer;
+    background: #A9B9FF;
+    border-radius: 1px;
+    border: 0;
+    width: 40px;
+    color: #75668A;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  option {
+    border: none;
+  }
+  
+  option:hover {
+    border: none;
+    background-color: white;
+  }
+
+  .clock {
+    position: fixed;
+    top: 23px;
+    right: 1%;
+    display: inline-block;
+    float: right;
+    width: 10%;
+  }
+
+  .clock #date {
+    padding: 15% 15%;
+    background: #4174C1;
+    font: 100% Lato Semibold;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+  }
+
+  .clock #time {
+    text-align: center;
+    border-radius: 2px;
+    padding: 15% 15%;
+    background: #F09400;
+    font: 140% Lato Semibold;
+    color: white;
+  }
+
+  .insert {
+    width: 15px;
+    height: 15px;
+    float: right;
+    margin-left: 3px;
+  }
+
+  .insert:hover {
+    cursor: pointer;
+  }

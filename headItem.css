@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Bold.ttf");
+    font-family: "Lato Reg";
+    src: url("../fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Lato Heavy";
+    src: url("../fonts/Lato-Heavy.ttf");
+}
+
+@font-face {
+    font-family: "Lato Semibold";
+    src: url("../fonts/Lato-Semibold.ttf");
+}
+
+@font-face {
+    font-family: "Lato Medium";
+    src: url("../fonts/Lato-Medium.ttf");
+}
+
+@font-face {
+    font-family: "FontAwesome";
+    src: url("../fonts/fontawesome-webfont.ttf");
+}
+
+.column {
+    margin: 10px 0.5%;
+    display: inline-block;
+    width: 21%;
+}
+
+.itemHeaders {
+    width: 100%;
+    margin: 5px;
+    padding: 0;
+    height: 70px;
+    text-align: center;
+    font: 20px Lato Semibold;
+    color: white;
+    background: #62A1CC;
+    border-radius: 2px;
+    text-transform: uppercase;
+    line-height: 250%;
+    vertical-align: bottom;
+}
+
+.itemHeaders img {
+    width: 20px;
+    height: 100%;
+    float: right;
+    cursor: pointer;
+}
+
+.itemHeaders add-button {
+    vertical-align: bottom;
+}
+
+.itemHeaders img title {
+    background-color: pink;
+}
+
+mark-all {
+    float: right;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    background: #687497;
+}

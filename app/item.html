@@ -1,0 +1,31 @@
+<div class="item-item ui-state-default">
+
+<span class="textArr" ng-model="showInput" ng-if="showInput==false"><textarea wrap="hard" ng-model="item.name" elastic></textarea>
+  </span>
+  <span class="theTask" ng-if="showInput==true">{{item.name}}</span>
+  <span style="float: right">
+    <insert-item class="insert"></insert-item>
+    <span class="edit-item"></span>
+    <span ng-if="showInput==true" class="time">
+     {{item.time}}
+   </span>
+   <span>
+    <input ng-if="showInput==false" type="text" ng-model="item.time" class="theInput time" maxlength="5">
+  </span>
+  <div>
+    <span status></span>
+    <insert-reserve class="insert"></insert-reserve>
+    <span remove-button random-number="item.randomNumber"></span>
+  </div>
+  <div></span>
+    <mark-button item="item"></mark-button>
+    <span>
+      <input ng-if="showInput==false" type="text" ng-model="item.time_end" class="theInput time" maxlength="5">
+    </span>
+    <span ng-if="showInput==true" class="time">
+     {{item.time_end}}
+   </span>
+ </div>
+</span>
+
+</div>

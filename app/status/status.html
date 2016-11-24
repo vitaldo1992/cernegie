@@ -1,0 +1,7 @@
+<select name="status" id="status" ng-model="pointController.status" ng-change="changeParent()">
+    <option value="" disabled selected value>status</option>
+    <option value="ordered" ng-show="checkParent()!='ordered'">ordered</option>
+    <option value="in process" ng-show="checkParent()!='inProcess'">during</option>
+    <option value="later" ng-show="checkParent()!='postponed'">later</option>
+    <option value="done" ng-show="checkParent()!='done'">done</option>
+</select>

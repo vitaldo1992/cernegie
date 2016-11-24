@@ -1,0 +1,41 @@
+.mark-button {
+	float: right;
+	margin-top: 4px;
+	width: 14px;
+	height: 14px;
+	position: relative;
+}
+.mark-button label {
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	background: #687497;
+	border-radius: 2px;
+	cursor: pointer;
+	/*border: 3px solid white;*/
+	/*background-image: url('../images/checked_checkbox.png');*/
+	/*background-repeat: no-repeat;*/
+}
+
+.mark-button label:before {
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: 3px;
+	width: 7px;
+	height: 3px;
+	border: 2px solid white;
+	border-top: none;
+	border-right: none;
+	transform: rotate(-45deg);
+	opacity: 0;
+}
+
+.mark-button input[type="checkbox"] {
+	visibility: hidden;
+	position: absolute;
+}
+
+.mark-button input[type="checkbox"]:checked + label:before {
+	opacity: 1;
+}

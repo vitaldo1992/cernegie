@@ -1,0 +1,17 @@
+{
+  "name": "sortable",
+  "homepage": "https://github.com/vitaldo1992/web",
+  "authors": [
+    "vitaldo1992 <vitaliy.duvalko@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

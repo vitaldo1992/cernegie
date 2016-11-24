@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Drag and Drob finally</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src='app/sortable.jquery.js'></script>
+    <script src='bower_components/angular/angular.min.js'></script>
+    <script src='bower_components/ngstorage/ngStorage.min.js'></script>
+    <script src='app/app.js'></script>
+    <script src='app/list-controller.js'></script>
+    <script src='app/list-item.directive.js'></script>
+    <script src='app/edit-button/edit.directive.js'></script>
+    <script src="app/status/status.js"></script>
+    <script src='app/add-button/add.button.directive.js'></script>
+    <script src='app/delete-all/delete.all.js'></script>
+    <script src='app/remove-button/remove.btn.directive.js'></script>
+    <script src='app/mark-button/mark-button.directive.js'></script>
+    <script src='app/mark-all-button/mark-all.js'></script>
+    <script src='app/save-all-button/save-all.directive.js'></script>
+    <script src='app/insert-button/insert-item-directive.js'></script>
+    <script src='app/add-reserve/reserve.directive.js'></script>
+    <script src='app/clock-directive/clock.directive.js'></script>
+    <script src="app/elastic.textarea.js"></script>
+    <script src="app/sortable.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="headItem.css">
+    <link rel="stylesheet" href="app/add-button/add-button.css">
+    <link rel="stylesheet" href="app/mark-button/mark-button.css">
+    <link rel="icon" sizes="16x16" href="app/images/favicon-16x16.png">
+    <link rel="image_src" href="app/images/favicon-16x16.png" >
+</head>
+
+<body>
+    <div ng-controller="listController">
+        <div class="column">
+            <div class="headSet itemHeaders">
+                <div>
+                    SET
+                </div>
+                <div style="height: 28%">
+                    <add-button></add-button>
+                    <delete-all></delete-all>
+                    <mark-all tasks="listController.tasks"></mark-all>
+                    <save-all></save-all>
+                </div>
+            </div>
+            <div class="sortable" id="ordered" ordered>
+                <list-Of class="ui-state-default sortable-items ordered-items" ng-repeat="item in listController.tasks | orderBy: 'index'"></list-Of>
+            </div>
+        </div>
+        <div class="column">
+            <div class="headProcess itemHeaders">
+                <div>In process</div>
+                <div style="height: 20px">
+                    <mark-all tasks="listController.progress"></mark-all>
+                </div>
+            </div>
+            <div class="sortable" id="inProcess">
+                <list-Of class="ui-state-default sortable-items inProcess-items" ng-repeat="item in listController.progress | orderBy: 'index'"></list-Of>
+            </div>
+        </div>
+        <div class="column">
+            <div class="headPostponed itemHeaders">
+                <div>Postponed</div>
+                <div style="height: 20px">
+                    <mark-all tasks="listController.later"></mark-all>
+                </div>
+            </div>
+            <div class="sortable" id="postponed">
+                <list-Of class="ui-state-default sortable-items postponed-items" ng-repeat="item in listController.later | orderBy: 'index'"></list-Of>
+            </div>
+        </div>
+        <div class="column">
+            <div class="headDone itemHeaders">
+                <div>Done</div>
+                <div style="height: 20px">
+                    <mark-all tasks="listController.done"></mark-all>
+                </div>
+            </div>
+            <div class="sortable" id="done">
+                <list-Of class="ui-state-default sortable-items done-items" ng-repeat="item in listController.done | orderBy: 'index' "></list-Of>
+            </div>
+        </div>
+        <div class="clock">
+            <clock></clock>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
